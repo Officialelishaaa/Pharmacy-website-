@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times and Vantage Pharmacy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0056b3;
+            padding: 0.5em 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .services, .about, .contact {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        .services ul, .about p {
+            list-style: none;
+            padding: 0;
+        }
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Slideshow styles */
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 18px;
+            transition: 0.3s;
+            user-select: none;
+        }
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+            nav a {
+                font-size: 14px;
+                margin: 0 10px;
+            }
+            section {
+                padding: 10px;
+            }
+            .services, .about, .contact {
+                width: 90%;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 20px;
+            }
+            nav a {
+                font-size: 12px;
+                margin: 0 8px;
+            }
+            footer p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Times and Vantage Pharmacy</h1>
+        <p>Your health, our priority for over 35 years.</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <section id="home">
+        <h2>Welcome to Times and Vantage Pharmacy</h2>
+        <p>We offer high-quality pharmaceutical services to meet all your health needs. With over 35 years of trusted service in the community, we continue to prioritize your health and well-being.</p>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section id="slideshow">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="https://via.placeholder.com/1200x400?text=Featured+Product+1" alt="Featured Product 1" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="https://via.placeholder.com/1200x400?text=Featured+Service+2" alt="Featured Service 2" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="https://via.placeholder.com/1200x400?text=Discounted+Offer+3" alt="Discounted Offer 3" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li><strong>Prescription Refills:</strong> Convenient, fast, and accurate refills to keep you on track with your medication.</li>
+            <li><strong>Health Consultations:</strong> Our expert pharmacists offer advice and guidance on health-related issues.</li>
+            <li><strong>Vaccination Services:</strong> Stay protected with our immunization services for children and adults.</li>
+            <li><strong>Over-the-Counter Medicines:</strong> A wide range of medications for minor health issues available for quick purchase.</li>
+            <li><strong>Medical Equipment Rental:</strong> Rent essential medical equipment, such as oxygen tanks and wheelchairs, for your home care needs.</li>
+        </ul>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Times and Vantage Pharmacy has been a cornerstone of health in the community for over 35 years. Our dedicated staff ensures you receive personalized care with a focus on quality and compassion. From medication management to health consultations, we provide everything you need for a healthy life.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, please reach out to us through the details below:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:oelisha148@gmail.com">oelisha148@gmail.com</a></li>
+            <li><strong>Phone:</strong> 09012190234</li>
+        </ul>
+        <form onsubmit="return validateForm()">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Times and Vantage Pharmacy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Slideshow functionality
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+
+        function plusSlides(n) {
+            slideIndex += n;
+            let slides = document.getElementsByClassName("mySlides");
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            if (slideIndex < 1) { slideIndex = slides.length }
+            showSlides();
+        }
+
+        // Contact form validation
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (name == "" || email == "" || message == "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
